@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 207, 207);
+    padding: 2rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(238,238,238);
+    font-size: 1.5rem;
+    background-color: rgb(94, 93, 93);
+    height: 6rem;
+}
+
+.personal-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.value-control.success {
+    border-color: rgb(72,255,0)
+}
+
+.value-control.error {
+    border-color: red;
+}
+
+
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 20rem;
+}
+
+.form > input {
+    padding: 0.75rem 0;
+    margin: 0.25rem 0;
+    font-size: 1.2rem;
+}
+
+.form small {
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+}
+
+.form small.error {
+    visibility: visible;
+    
+}
+
+.submit-btn {
+    height: 3rem;
+    font-size: 1.5rem;
+    transition: 1s;
+    cursor: pointer;
+    width: 10rem;
+}
+
+.submit-btn:hover {
+    transform: scale(1.1,1.1);
+}
+
+.value-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    width: 50rem;
+    word-wrap: break-word;
+    border: 0.1rem solid black;
+}
+
+
+.cv-header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-bottom: 0.1rem solid black;
+    background-color: rgb(20, 62, 114);
+    color: rgb(255,255,255);
+    padding: 2rem;
+    font-size: 2rem;
+    height: 10rem;
+}
+
+.cv-header > h3 {
+    font-size: 1.5rem;
+}
+
+.cv-left-panel {
+    background-color: rgb(255,255,255);
+    width: 35rem;
+    max-width: 35rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+}
+
+.cv-left-panel > h1 {
+    border-bottom: 0.1rem solid black;
+    color: rgb(20, 62, 114)
+}
+
+.cv-description {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.cv-work-experience {
+    display: flex;
+    justify-content: left;
+    gap: 4rem;
+    font-size: 1.2rem;
+}
+
+
+
+.cv-education {
+    display: flex;
+    justify-content: left;
+    gap: 4rem;
+    font-size: 1.2rem;
+}
+
+.cv-right-panel {
+    background-color: rgb(221, 221, 221);
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.cv-personal-details > h1 {
+    border-bottom: 0.1rem solid black;
+    color: rgb(20, 62, 114)
+}
+
+.cv-personal-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cv-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.cv-photo {
+    margin-top: 0.5rem;
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(255,255,255);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(94, 93, 93);
+    height: 3rem;
+    color: rgb(255,255,255);
+}
+
