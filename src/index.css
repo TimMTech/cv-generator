@@ -5,6 +5,10 @@
     font-family: 'Smooch Sans', sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -19,7 +23,7 @@
     justify-content: center;
     align-items: center;
     color: rgb(238,238,238);
-    font-size: 1.5rem;
+    font-size: 2rem;
     background-color: rgb(94, 93, 93);
     height: 6rem;
 }
@@ -53,14 +57,6 @@
     justify-content: center;
 }
 
-.value-control.success {
-    border-color: rgb(72,255,0)
-}
-
-.value-control.error {
-    border-color: red;
-}
-
 
 
 .form {
@@ -76,40 +72,32 @@
     font-size: 1.2rem;
 }
 
-.form small {
-    visibility: hidden;
-    bottom: 0;
-    left: 0;
-}
-
-.form small.error {
-    visibility: visible;
-    
-}
-
-.submit-btn {
+.btn {
     height: 3rem;
     font-size: 1.5rem;
     transition: 1s;
     cursor: pointer;
-    width: 10rem;
+    width: 100%;
+    margin: 0.5rem 0;
 }
 
-.submit-btn:hover {
+
+.btn:hover {
     transform: scale(1.1,1.1);
 }
 
-.value-container {
+
+
+.main-container {
     display: flex;
     flex-direction: column;
     margin-top: 1.5rem;
-    width: 50rem;
     word-wrap: break-word;
     border: 0.1rem solid black;
 }
 
 
-.cv-header {
+.header {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -121,11 +109,16 @@
     height: 10rem;
 }
 
-.cv-header > h3 {
+.header > h3 {
     font-size: 1.5rem;
 }
 
-.cv-left-panel {
+.panels {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.left-panel {
     background-color: rgb(255,255,255);
     width: 35rem;
     max-width: 35rem;
@@ -133,37 +126,71 @@
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    
+    gap: 2rem;
 }
 
-.cv-left-panel > h1 {
+.left-panel > h1 {
     border-bottom: 0.1rem solid black;
     color: rgb(20, 62, 114)
 }
 
-.cv-description {
+.description {
     font-style: italic;
     font-size: 1.2rem;
 }
 
-.cv-work-experience {
+.experience {
     display: flex;
-    justify-content: left;
-    gap: 4rem;
+    padding: 1.5rem 1.5rem;
+    gap: 5rem;
     font-size: 1.2rem;
+    overflow-wrap: break-word;
+    text-align: center;
+    width: 100%;
+}
+
+.worked {
+    display: inline-block;
+    text-align: left;
+    width: 100px;
+}
+
+.worked-at {
+    text-align: left;
 }
 
 
-
-.cv-education {
-    display: flex;
-    justify-content: left;
-    gap: 4rem;
-    font-size: 1.2rem;
+.worked-at > div > :nth-of-type(1) {
+    font-size: 1.5rem;
 }
 
-.cv-right-panel {
+
+.education {
+    display: flex;
+    padding: 1.5rem 1.5rem;
+    gap: 5rem;
+    font-size: 1.2rem;
+    overflow-wrap: break-word;
+    text-align: center;
+    width: 100%;
+}
+
+.studied {
+    display: inline-block;
+    text-align: left;
+    width: 100px;
+}
+
+.studied-at {
+    text-align: left;
+}
+
+.studied-at > div > :nth-of-type(1) {
+    font-size: 1.5rem;
+}
+
+
+.right-panel {
     background-color: rgb(221, 221, 221);
     width: 15rem;
     display: flex;
@@ -172,28 +199,22 @@
    
 }
 
-.cv-personal-details > h1 {
+.personal-details > h1 {
     border-bottom: 0.1rem solid black;
     color: rgb(20, 62, 114)
 }
 
-.cv-personal-details {
+.personal-details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.cv-main {
-    display: flex;
-    justify-content: space-between;
-}
 
-
-
-.cv-photo {
+.photo {
     margin-top: 0.5rem;
     height: 10rem;
-    width: 10rem;
+    width: 15rem;
     background-color: rgb(255,255,255);
 }
 
@@ -210,4 +231,5 @@
     height: 3rem;
     color: rgb(255,255,255);
 }
+
 

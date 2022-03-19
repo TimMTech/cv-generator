@@ -1,57 +1,51 @@
-const ExperienceSection = ({ inputValue, setInputValue }) => {
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setInputValue((prevState) => ({
-      experienceForm: {
-        ...prevState.experienceForm,
-        [id]: value
-      }
-    }))
-  };
+import Button from "../Utils/Button";
 
+const ExperienceSection = ({ id, inputValue, handleExperienceChange }) => {
+  
   return (
     <main className="experience-container">
       <h2>Experience Information</h2>
       <section className="form-container">
         <form className="form">
           <input
-            id="position"
+            name="position"
             className="value-control"
             type="text"
             value={inputValue.position}
-            onChange={handleChange}
+            onChange={(e) => handleExperienceChange(e, id)}
             placeholder="Position"
           />
+
           <input
-            id="company"
+            name="company"
             className="value-control"
             type="text"
             value={inputValue.company}
-            onChange={handleChange}
+            onChange={(e) => handleExperienceChange(e, id)}
             placeholder="Company"
           />
           <input
-            id="city"
+            name="city"
             className="value-control"
             type="text"
             value={inputValue.city}
-            onChange={handleChange}
+            onChange={(e) => handleExperienceChange(e, id)}
             placeholder="City"
           />
           <input
-            id="from"
+            name="from"
             className="value-control"
             type="text"
             value={inputValue.from}
-            onChange={handleChange}
+            onChange={(e) => handleExperienceChange(e, id)}
             placeholder="From"
           />
           <input
-            id="to"
+            name="to"
             className="value-control"
             type="text"
             value={inputValue.to}
-            onChange={handleChange}
+            onChange={(e) => handleExperienceChange(e, id)}
             placeholder="To"
           />
         </form>

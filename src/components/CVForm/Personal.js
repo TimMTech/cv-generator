@@ -1,96 +1,65 @@
-const PersonalSection = ({ inputValue, setInputValue }) => {
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    console.log(value)
-    setInputValue((prevState) => ({
-      personalForm: {
-        ...prevState.personalForm,
-        [id]: value,
-      },
-    }));
-  };
-
-  const handleFile = (e) => {
-    const { id, files } = e.target;
-    if (!files) return
-    setInputValue((prevState) => ({
-      personalForm: {
-        ...prevState.personalForm,
-        [id]: URL.createObjectURL(new Blob([files[0]], {type:"image/*"}))
-      }
-    }))
-  }
-
-  
-
+const PersonalSection = ({ inputValue, handlePersonalChange }) => {
   return (
     <main className="personal-container">
       <h2>Personal Information</h2>
       <section className="form-container">
         <form className="form">
           <input
-            id="firstName"
-            className="value-control"
+            name="firstName"
             type="text"
             value={inputValue.firstName}
-            onChange={handleChange}
+            onChange={(e) => handlePersonalChange(e)}
             placeholder="First Name"
           />
           <input
-            id="lastName"
-            className="value-control"
+            name="lastName"
             type="text"
             value={inputValue.lastName}
-            onChange={handleChange}
+            onChange={(e) => handlePersonalChange(e)}
             placeholder="Last Name"
           />
           <input
-            id="jobTitle"
-            className="value-control"
+            name="jobTitle"
             type="text"
             value={inputValue.jobTitle}
-            onChange={handleChange}
+            onChange={(e) => handlePersonalChange(e)}
             placeholder="Job Title"
           />
           <p>Choose Profile Image</p>
           <input
-            id="photo"
+            name="photo"
             type="file"
             className="photo-upload"
             multiple="image/*"
-            onChange={handleFile}
+            onChange={(e) => handlePersonalChange(e)}
             placeholder="Photo"
           />
           <input
-            id="address"
-            className="value-control"
+            name="address"
             type="text"
             value={inputValue.address}
-            onChange={handleChange}
+            onChange={(e) => handlePersonalChange(e)}
             placeholder="Address"
           />
           <input
-            id="phone"
-            className="value-control"
+            name="phone"
             type="text"
             value={inputValue.phone}
-            onChange={handleChange}
+            onChange={(e) => handlePersonalChange(e)}
             placeholder="Phone Number"
           />
           <input
-            id="email"
-            className="value-control"
+            name="email"
             type="text"
             value={inputValue.email}
-            onChange={handleChange}
+            onChange={(e) => handlePersonalChange(e)}
             placeholder="Email Address"
           />
           <input
-            id="description"
-            className="description"
+            name="description"
             type="text"
             value={inputValue.description}
-            onChange={handleChange}
+            onChange={(e) => handlePersonalChange(e)}
             placeholder="Description"
           />
         </form>

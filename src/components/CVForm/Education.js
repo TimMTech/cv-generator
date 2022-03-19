@@ -1,66 +1,56 @@
-const EducationSection = ({ inputValue, setInputValue }) => {
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setInputValue((prevState) => ({
-      educationForm: {
-        ...prevState.educationForm,
-        [id]: value,
-      },
-    }));
-  };
-
-
+const EducationSection = ({ id, inputValue, handleEducationChange }) => {
+  
   return (
     <main className="education-container">
       <h2>Education Information</h2>
       <section className="form-container">
         <form className="form">
           <input
-            id="university"
+            name="university"
             className="value-control"
             type="text"
             value={inputValue.university}
-            onChange={handleChange}
+            onChange={(e) => handleEducationChange(e, id)}
             placeholder="University"
           />
           <input
-            id="universityCity"
+            name="universityCity"
             className="value-control"
             type="text"
             value={inputValue.universityCity}
-            onChange={handleChange}
+            onChange={(e) => handleEducationChange(e, id)}
             placeholder="City"
           />
           <input
-            id="degree"
+            name="degree"
             className="value-control"
             type="text"
             value={inputValue.degree}
-            onChange={handleChange}
+            onChange={(e) => handleEducationChange(e, id)}
             placeholder="Degree"
           />
           <input
-            id="subject"
+            name="subject"
             className="value-control"
             type="text"
             value={inputValue.subject}
-            onChange={handleChange}
+            onChange={(e) => handleEducationChange(e, id)}
             placeholder="Subject"
           />
           <input
-            id="started"
+            name="started"
             className="value-control"
             type="text"
             value={inputValue.started}
-            onChange={handleChange}
+            onChange={(e) => handleEducationChange(e, id)}
             placeholder="Started"
           />
           <input
-            id="graduated"
+            name="graduated"
             className="value-control"
             type="text"
             value={inputValue.graduated}
-            onChange={handleChange}
+            onChange={(e) => handleEducationChange(e, id)}
             placeholder="Graduation"
           />
         </form>
@@ -70,4 +60,3 @@ const EducationSection = ({ inputValue, setInputValue }) => {
 };
 
 export default EducationSection;
-
